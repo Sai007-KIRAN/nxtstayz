@@ -66,7 +66,7 @@ public class RoomJpaService implements RoomRepository {
                 Hotel hotel = room.getHotel();
                 int pId = hotel.getHotelId();
                 Hotel add = HJR.findById(pId).get();
-                room.setHotel(add);
+                update.setHotel(add);
             }
             rjr.save(update);
             return update;
